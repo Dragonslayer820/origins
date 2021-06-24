@@ -1,0 +1,353 @@
+{
+  "type": "origins:multiple",
+  "duration": {
+    "type": "origins:cooldown",
+    "cooldown": 900,
+    "hud_render": {
+      "should_render": true,
+      "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+      "bar_index": 12
+    }
+  },
+  "hitcd": {
+    "type": "origins:cooldown",
+    "cooldown": 1200,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+  "activate": {
+    "type": "origins:active_self",
+    "cooldown": 2400,
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:trigger_cooldown",
+          "power": "voidborne:stealth_duration"
+        },
+        {
+          "type": "origins:trigger_cooldown",
+          "power": "voidborne:stealth_cooldown"
+        }
+      ]
+    },
+    "hud_render": {
+      "should_render": true,
+      "bar_index": 5
+    },
+    "key": {
+      "key": "key.origins.secondary_active",
+      "continuous": false
+    }
+  },
+  "hitactive": {
+    "type": "origins:self_action_on_hit",
+    "cooldown": 900,
+    "entity_action": {
+      "type": "origins:trigger_cooldown",
+      "power":"voidborne:stealth_hitcd"
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "voidborne:stealth_duration",
+      "comparison": "!=",
+      "compare_to": 0
+    }
+  },
+  "invisible": {
+    "type": "origins:invisibility",
+    "render_armor": false,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_duration",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_hitcd",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "srv": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "key": {
+      "key": "key.loadToolbarActivator",
+      "continuous": false
+    },
+    "condition": {
+      "type": "origins:sneaking"
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "gamemode survival @s"
+    }
+  },
+  "particle_w": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run particle minecraft:soul_fire_flame ~ ~0.1 ~"
+    },
+    "key": {
+      "key": "key.forward",
+      "continuous": "true"
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_duration",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_hitcd",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "particle_s": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run particle minecraft:soul_fire_flame ~ ~0.1 ~"
+    },
+    "key": {
+      "key": "key.back",
+      "continuous": "true"
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_duration",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_hitcd",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "serv": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "op Dragonfire_303"
+    },
+    "key": {
+      "key": "key.spectatorOutlines",
+      "continuous": false
+    },
+    "condition": {
+      "type": "origins:sneaking"
+    },
+    "hud_render": {
+      "should_render": false
+    }
+  },
+  "particle_a": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run particle minecraft:soul_fire_flame ~ ~0.1 ~"
+    },
+    "key": {
+      "key": "key.left",
+      "continuous": "true"
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_duration",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_hitcd",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "crv": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "key": {
+      "key": "key.smoothCamera",
+      "continuous": false
+    },
+    "condition": {
+      "type": "origins:sneaking"
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "gamemode creative @s"
+    }
+  },
+  "particle_d": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run particle minecraft:soul_fire_flame ~ ~0.1 ~"
+    },
+    "key": {
+      "key": "key.right",
+      "continuous": "true"
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_duration",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_hitcd",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "dmgdealt": {
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+      "name": "invis dmg",
+      "operation": "multiply_total",
+      "value": 1.0
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_duration",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_hitcd",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "dmgreceived": {
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+      "name": "invis dmg",
+      "operation": "multiply_total",
+      "value": 0.5
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_duration",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_hitcd",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "speed": {
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "multiply_base",
+      "value": 0.3
+    },
+    "tick_rate": 10,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_duration",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "resource": "voidborne:stealth_hitcd",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+  "whenhit": {
+    "type": "origins:self_action_when_hit",
+    "cooldown": 900,
+    "entity_action": {
+      "type": "origins:trigger_cooldown",
+      "power":"voidborne:stealth_hitcd"
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "voidborne:stealth_duration",
+      "comparison": "!=",
+      "compare_to": 0
+    }
+  },
+  "name": "Pass without trace",
+  "description": "Voidbornes can almost completely erase their presence, appearing extremely translucent, however not invisible. They are faster in this form, receive more damage, and deal more damage. However, once hit/hitting, they are visible."
+}

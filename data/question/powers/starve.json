@@ -1,0 +1,10 @@
+{
+  "type": "origins:modify_exhaustion",
+  "modifier": {
+	   "name": "Origin modifier",
+	   "operation": "multiply_base",
+	   "value": 1
+  },
+  "name": "Eternal Starvation",
+  "description": "Hunger drains faster double then normal, requiring more energy to keep up with everything they have done to themselves."
+}

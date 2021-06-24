@@ -1,0 +1,137 @@
+{
+  "type": "origins:multiple",
+  "phasing": {
+      "type": "origins:phasing",
+      "render_type": "blindness",
+      "view_distance": "0",
+      "condition": {
+          "type": "origins:power_active",
+          "power": "voidborne:nocliptoggle"
+      }
+  },
+  "blind": {
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 4,
+    "duration_per_stack": 24000,
+    "effect": {
+      "effect": "minecraft:blindness",
+      "is_ambient": "true",
+      "amplifier": 1,
+      "show_particles": false,
+      "show_icon": true
+    },
+    "condition": {
+      "type": "origins:power_active",
+      "power": "voidborne:nocliptoggle"
+    }
+    },
+  "cleareffect": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:if_else",
+      "condition": {
+        "type": "origins:power_active",
+        "power": "voidborne:nocliptoggle",
+        "inverted": true
+      },
+      "if_action": {
+        "type": "origins:clear_effect"
+      }
+    },
+    "key": {
+      "key": "key.origins.primary_active",
+      "continuous": false
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "cooldown": 1
+  },
+  "invisible": {
+    "type": "origins:invisibility",
+    "render_armor": false,
+    "condition": {
+      "type": "origins:power_active",
+      "power": "voidborne:nocliptoggle"
+    }
+  },
+  "particle_w": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run particle minecraft:soul_fire_flame ~ ~0.1 ~"
+    },
+    "key": {
+      "key": "key.forward",
+      "continuous": "true"
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:power_active",
+      "power": "voidborne:nocliptoggle"
+    }
+  },
+  "particle_a": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run particle minecraft:soul_fire_flame ~ ~0.1 ~"
+    },
+    "key": {
+      "key": "key.left",
+      "continuous": "true"
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:power_active",
+      "power": "voidborne:nocliptoggle"
+    }
+  },
+  "particle_s": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run particle minecraft:soul_fire_flame ~ ~0.1 ~"
+    },
+    "key": {
+      "key": "key.back",
+      "continuous": "true"
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:power_active",
+      "power": "voidborne:nocliptoggle"
+    }
+  },
+  "particle_d": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run particle minecraft:soul_fire_flame ~ ~0.1 ~"
+    },
+    "key": {
+      "key": "key.right",
+      "continuous": "true"
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:power_active",
+      "power": "voidborne:nocliptoggle"
+    }
+  },
+  "name": "Phase Shift",
+  "description": "Voidbornes are able to separate theirselves from existence, phasing in and out of existence wherever wanted. However, it is said they are unable to see where they appear"
+}

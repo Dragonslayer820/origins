@@ -1,0 +1,16 @@
+{
+	"type": "origins:conditioned_attribute",
+  "modifier": {
+      "name": "Endurance",
+      "attribute": "minecraft:generic.armor",
+      "operation": "addition",
+			"value": 4
+	},
+	"condition": {
+		"type": "origins:health",
+		"comparison": ">=",
+		"compare_to": 2
+	},
+	"name": "Endurance",
+	"description": "After years of being in the military, you have gained endurance when put into a dire situation. Provides an additional armor when on 2 hearts or less."
+}

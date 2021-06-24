@@ -1,0 +1,11 @@
+{
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Max health Decrease",
+    "attribute": "minecraft:generic.max_health",
+    "value": -6,
+    "operation": "addition"
+  },
+  "name": "Ethereal Form",
+  "description": "Due to being borne from the void, Voidbornes don't have as much mass as other... entities. Resulting in less max HP"
+}

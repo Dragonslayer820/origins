@@ -1,0 +1,26 @@
+{
+  "type": "origins:multiple",
+  "cd": {
+    "type": "origins:cooldown",
+    "cooldown": 200,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+  "speed": {
+    "type": "origins:conditioned_attribute",
+    "tick_rate": 1,
+    "modifier": {
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "multiply_base",
+      "value": 0.5,
+      "name": "sugarfast"
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "question:sugarspeed_cd",
+      "compare_to": 0,
+      "comparison": ">"
+    }
+  }
+}

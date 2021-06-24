@@ -1,0 +1,87 @@
+{
+  "type": "origins:multiple",
+  "cooldown": {
+    "type": "origins:cooldown",
+    "cooldown": 24000,
+    "hud_render": {
+      "should_render": true,
+      "bar_index": 3
+    }
+  },
+  "respawn": {
+    "type": "origins:prevent_death",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:trigger_cooldown",
+          "power": "voidborne:deathprotect_cooldown"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "execute as @s run function coords:return",
+          "permission_level": 3
+        },
+		{
+		  "type": "origins:extinguish"
+		}
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "voidborne:deathprotect_cooldown",
+      "comparison": "==",
+      "compare_to": 0
+    }
+  },
+  "dmgdown": {
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+      "name": "deathprotectWeakness",
+      "operation": "multiply_base",
+      "value": -0.75
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "voidborne:deathprotect_cooldown",
+      "comparison": "!=",
+      "compare_to": 0
+    }
+  },
+  "speeddown": {
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+      "name": "deathprotectSlow",
+      "attribute": "minecraft:generic.movement_speed",
+      "value": -0.2,
+      "operation": "multiply_base"
+    },
+    "tick_rate": 15,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "voidborne:deathprotect_cooldown",
+      "comparison": "!=",
+      "compare_to": 0
+    }
+  },
+  "setspawn": {
+    "type": "origins:active_self",
+    "cooldown": 24000,
+    "hud_render": {
+      "should_render": true,
+      "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+      "bar_index": 0
+    },
+    "key": {
+      "key": "key.saveToolbarActivator",
+      "continuous": false
+    },
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute as @s run function coords:save",
+      "permission_level": 3
+    }
+  },
+  "name": "DeathProtect",
+  "description": "Placeholder"
+}

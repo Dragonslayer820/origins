@@ -1,0 +1,35 @@
+{
+    "type": "origins:action_on_item_use",
+    "entity_action": {
+        "type":"origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "effect give @s minecraft:nausea 0",
+				"permission_level": 4
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "death:insanity",
+				"change": -500
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.ghast.scream"
+			}
+		]
+    },
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:milk_bucket"
+        }
+    },
+	"condition": {
+		"type": "origins:resource",
+		"resource": "death:insanity",
+		"comparison": ">=",
+		"compare_to": 495
+	},
+	"hidden":true
+}

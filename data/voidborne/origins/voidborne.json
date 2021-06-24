@@ -1,0 +1,18 @@
+{
+	"powers": [
+		"voidborne:voidbornebody",
+		"voidborne:hpdown",
+		"voidborne:nightvision",
+		"voidborne:deathprotect",
+		"voidborne:nocliptoggle",
+		"voidborne:noclip",
+		"voidborne:stealth",
+		"voidborne:mask"
+	],
+	"icon": "waystones:pocket_wormhole",
+	"unchoosable": true,
+	"order": 10,
+	"impact": 3,
+	"name": "Voidborne",
+	"description": "Born and molded from the void, voidbornes have little documentation on them. What is known is they are natural born assassins, the rest is through tales and rumors"
+}

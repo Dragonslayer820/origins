@@ -1,0 +1,18 @@
+{
+  "type": "origins:invulnerability",
+  "damage_condition": {
+	"type": "origins:or",
+	"conditions": [
+	  {
+		"type": "origins:name",
+		"name": "fall"
+	  },
+	  {
+		"type": "origins:name",
+		"name": "flyIntoWall"
+	  }
+	]
+  },
+  "name": "Runic Scars",
+  "description": "Past experiments have made them more tolerated to pain, allowing them to not take fall damage or kinetic damage."
+}
