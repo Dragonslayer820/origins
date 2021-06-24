@@ -1,0 +1,21 @@
+{
+  "type": "origins:multiple",
+  "name": "Battle Experience",
+  "description": "You are experienced in battle, you know how to deal more damage and take less.",
+  "dmgresist": {
+      "type": "origins:modify_damage_taken",
+      "modifier": {
+        "name": "dmgResist",
+        "operation": "multiply_total",
+        "value": -0.25
+      }
+  },
+  "dmgup": {
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+      "name": "dmgup",
+      "operation": "multiply_base",
+      "value": 0.25
+    }
+  }
+}

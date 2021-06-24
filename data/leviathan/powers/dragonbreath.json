@@ -1,0 +1,15 @@
+{
+  "type": "origins:fire_projectile",
+  "cooldown": 30,
+  "hud_render": {
+    "bar_index": 6
+  },
+  "entity_type": "origins:enderian_pearl",
+  "sound": "entity.ender_dragon.shoot",
+  "speed": 1.5,
+  "divergence": 0.5,
+  "key": {
+    "key": "key.origins.primary_active",
+    "continuous": false
+  }
+}

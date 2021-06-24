@@ -1,0 +1,21 @@
+{
+	"powers": [
+		"origins:throw_ender_pearl",
+		"origins:extra_reach",
+		"origins:elytra",
+		"origins:pumpkin_hate",
+		"origins:water_vulnerability",
+		"origins:more_kinetic_damage",
+		"origins:more_exhaustion",
+		"origins:no_shield",
+		"origins:damage_from_potions",
+		"origins:ender_particles",
+		"leviathan:scales",
+		"leviathan:health"
+	],
+	"icon": "minecraft:dragon_head",
+	"order": 12,
+	"impact": 2,
+	"name": "Terminus Leviathan",
+	"description": "Born of all being of the end, created to be a gateway between all 3 realms"
+}

@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"origins:more_exhaustion",
+		"origins:strong_arms",
+		"origins:sprint_jump",
+		"origins:fire_immunity",
+		"exmilitia:enduring",
+		"exmilitia:lastleg",
+		"exmilitia:battle-experience"
+	],
+	"icon": "minecraft:netherite_sword",
+	"order": 10,
+	"impact": 2,
+	"name": "Ex Militia",
+	"description": "This is a test."
+}

@@ -1,0 +1,9 @@
+{
+	"type": "origins:effect_immunity",
+	"effects": [
+		"minecraft:poison",
+		"minecraft:poison"
+	],
+	"name": "Boiling Point",
+	"description": "The souls keep your blood to a high enough temperature that poison boils out."
+}

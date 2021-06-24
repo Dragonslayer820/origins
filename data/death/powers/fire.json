@@ -1,0 +1,8 @@
+{
+  "type": "origins:invulnerability",
+  "damage_condition": {
+    "type": "origins:fire"
+  },
+  "name": "Fire Immunity",
+  "description": "The rage of the souls generate enough heat to prevent burns."
+}

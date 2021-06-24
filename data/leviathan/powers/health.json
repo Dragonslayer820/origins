@@ -1,0 +1,11 @@
+{
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Natural Armor health bonus",
+    "attribute": "minecraft:generic.max_health",
+    "value": 5.0,
+    "operation": "addition"
+  },
+  "name": "Healthy Constitution",
+  "description": "Due to the Leviathan's healthy constitution they have a higher max HP"
+}

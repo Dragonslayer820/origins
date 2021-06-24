@@ -1,0 +1,22 @@
+{
+	"powers": 
+	[
+		"death:boiling",
+		"death:wrath",
+		"death:fire",
+		"death:lastchance",
+		"death:soulabsorb",
+		"death:hydrophobia",
+		"death:appetite",
+		"death:insanity",
+		"death:insanity_gain",
+		"death:insanity_reset_kill",
+		"death:insanity_reset_milk",
+		"death:insanity_effect"
+	],
+	"icon": "minecraft:wither_skeleton_skull",
+	"order": 10,
+	"impact": 2,
+	"name": "Death Walker",
+	"description": "A man embodied by souls lost to time. All he hears is the voices no matter what he does."
+}

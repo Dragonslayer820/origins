@@ -1,0 +1,57 @@
+{
+  "type": "origins:multiple",
+  "dmgup": {
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+      "name": "dmgup",
+      "operation": "multiply_base",
+      "value": 0.5
+    }
+  },
+  "immunity": {
+    "type": "origins:effect_immunity",
+    "effects": [
+      "minecraft:speed",
+      "minecraft:slowness",
+      "minecraft:haste",
+      "minecraft:mining_fatigue",
+      "minecraft:strength",
+      "minecraft:instant_health",
+      "minecraft:instant_damage",
+      "minecraft:jump_boost",
+      "minecraft:nausea",
+      "minecraft:regeneration",
+      "minecraft:resistance",
+      "minecraft:fire_resistance",
+      "minecraft:water_breathing",
+      "minecraft:invisibility",
+      "minecraft:hunger",
+      "minecraft:weakness",
+      "minecraft:poison",
+      "minecraft:wither",
+      "minecraft:health_boost",
+      "minecraft:absorption",
+      "minecraft:saturation",
+      "minecraft:glowing",
+      "minecraft:levitation",
+      "minecraft:slow_falling",
+      "minecraft:conduit_power",
+      "minecraft:dolphins_grace",
+      "minecraft:night_vision"
+    ]
+  },
+  "noclip-immunity": {
+    "type": "origins:effect_immunity",
+    "effects": [
+      "minecraft:blindness"
+    ],
+    "condition": {
+      "type": "origins:power_active",
+      "power": "voidborne:nocliptoggle",
+      "inverted": true
+    }
+  },
+  "loading_priority": 1,
+  "name": "One with the Void",
+  "description": "Their bodies emit mystical energies enhancing their physical abilities however their bodies reject external influences."
+}

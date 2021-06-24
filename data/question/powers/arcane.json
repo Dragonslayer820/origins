@@ -1,0 +1,112 @@
+{
+  "type": "origins:multiple",
+  "description": "Allowing oneself to gain the ability of speed, and increase by power. To be able to activate this ability they must gain enough power. (Active)",
+  "name": "The Arcane",
+  "power": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 3000,
+    "hud_render": {
+      "should_render": true,
+      "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+      "bar_index": 14
+    }
+  },
+  "powercnt": {
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "question:arcane_power",
+      "change": 1
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:daytime",
+          "inverted": true
+        },
+        {
+          "type": "origins:exposed_to_sky"
+        }
+      ]
+    }
+  },
+  "powerdec": {
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "question:arcane_power",
+      "change": -1
+    },
+    "condition": {
+      "type": "origins:daytime"
+    }
+  },
+  "activetime": {
+    "type": "origins:cooldown",
+    "cooldown": 600,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+  "active": {
+    "type": "origins:active_self",
+    "cooldown": 20,
+    "hud_render": {
+      "should_render": false
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:change_resource",
+          "resource": "question:arcane_power",
+          "change": -3000
+        },
+        {
+          "type": "origins:trigger_cooldown",
+          "power": "question:arcane_activetime"
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "question:arcane_power",
+      "comparison": "==",
+      "compare_to": 3000
+    }
+  },
+  "speedbuff": {
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "multiply_base",
+      "value": 0.5,
+      "name": "ArcaneSpeed"
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "question:arcane_activetime",
+      "compare_to": 0,
+      "comparison": ">"
+    },
+    "tick_rate": 1
+  },
+  "dmgbuff": {
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+      "name": "ArcaneDmg",
+      "operation": "multiply_total",
+      "value": 0.5
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "question:arcane_activetime",
+      "compare_to": 0,
+      "comparison": ">"
+    }
+  }
+}

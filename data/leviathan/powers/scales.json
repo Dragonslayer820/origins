@@ -1,0 +1,11 @@
+{
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Natural Armor health bonus",
+    "attribute": "minecraft:generic.armor",
+    "value": 5.0,
+    "operation": "addition"
+  },
+  "name": "Scales",
+  "description": "Your hard scales provide extra protection against threats"
+}

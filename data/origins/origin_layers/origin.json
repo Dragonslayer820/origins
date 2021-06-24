@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "origins": [
+    "leviathan:leviathan",
+    "death:death",
+    "exmilitia:exmilitia",
+    "question:grem",
+    "voidborne:voidborne"
+  ]
+}

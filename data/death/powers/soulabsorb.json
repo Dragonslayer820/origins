@@ -1,0 +1,51 @@
+{
+  "type": "origins:action_over_time",
+  "entity_action": {
+    "type": "origins:apply_effect",
+    "effect": {
+      "effect": "minecraft:regeneration",
+      "duration": 100,
+      "amplifier": 1
+    }
+  },
+  "interval": 1,
+  "condition": {
+    "type": "origins:or",
+    "conditions": [
+      {
+        "type": "origins:on_block",
+        "block_condition": {
+          "type": "origins:or",
+          "conditions": [
+            {
+              "type": "origins:block",
+              "block": "minecraft:soul_sand"
+            },
+            {
+              "type": "origins:block",
+              "block": "minecraft:soul_soil"
+            }
+          ]
+        }
+      },
+      {
+        "type": "origins:in_block",
+        "block_condition": {
+          "type": "origins:or",
+          "conditions": [
+            {
+              "type": "origins:block",
+              "block": "minecraft:soul_sand"
+            },
+            {
+              "type": "origins:block",
+              "block": "minecraft:soul_soil"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "name": "Health from Beyond",
+  "description": "When standing directly on soul sand or soul soil you gain a health regen effect."
+}

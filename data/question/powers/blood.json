@@ -1,0 +1,46 @@
+{
+  "type": "origins:multiple",
+  "name": "Blood Magic",
+  "description": "Due to the curses that they have placed on themselves from experiments, they have shrunk to .5 height and have lost 5 hearts, leaving them at 5 hearts. However, due to this, they have the disadvantaged of reach, loosing half the reach of a normal height player. But due to the height loss they have gained the ability to climb up blocks.",
+  "attribute_modifiers": {
+    "type": "origins:attribute",
+    "modifiers": [
+      {
+        "name": "hpdown",
+        "attribute": "generic.max_health",
+        "operation": "addition",
+        "value": -10
+      },
+      {
+        "name": "reachdown",
+        "attribute": "reach-entity-attributes:reach",
+        "operation": "addition",
+        "value": -2
+      },
+      {
+        "name": "atkrangedown",
+        "attribute": "reach-entity-attributes:reach",
+        "operation": "addition",
+        "value": -0.5
+      },
+      {
+        "name": "speeddown",
+        "attribute": "generic.movement_speed",
+        "operation": "addition",
+        "value": -0.015
+      }
+    ]
+  },
+  "scale": {
+    "type": "extraorigins:modify_size",
+    "scale": 0.25
+  },
+  "jump_modifier": {
+	   "type": "origins:modify_jump",
+	   "modifier": {
+	       "name": "jumpheight",
+	       "operation": "multiply_total",
+	       "value": -0.3333
+  	}
+  }
+}

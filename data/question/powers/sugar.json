@@ -1,0 +1,55 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:feed",
+          "food": 1,
+          "saturation": 0
+        },
+        {
+          "type": "origins:trigger_cooldown",
+          "power": "question:sugarspeed_cd"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "clear @s minecraft:sugar 1"
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "offhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "sugar"
+            }
+          }
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "sugar"
+            }
+          }
+        }
+      ]
+  	},
+    "hud_render": {
+      "should_render": false
+    },
+    "cooldown": 20,
+    "name": "Sugar Rush",
+    "description": "Sugar gives them extra speed by 1.5x for 10 seconds, must be hungry to be able to use it.",
+    "key": {
+      "key": "key.use"
+    }
+}

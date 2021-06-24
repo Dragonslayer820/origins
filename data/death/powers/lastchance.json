@@ -1,0 +1,35 @@
+{
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+			"type": "origins:execute_command",
+			"command": "effect give @s minecraft:strength 7 0",
+			"permission_level": 4
+			},
+			{
+			"type": "origins:execute_command",
+			"command": "effect give @s minecraft:speed 10 1",
+			"permission_level": 4
+			},
+			{
+			"type": "origins:execute_command",
+			"command": "effect give @s minecraft:hunger 6 0",
+			"permission_level": 4
+			}
+		]
+	},
+	"cooldown": 1800,
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	},
+	"hud_render": {
+        "should_render": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+		"bar_index": 16
+    },
+	"name": "Last Chance",
+	"description": "The souls within you wish to keep you alive for their own benefit(Primary Ability)."
+}

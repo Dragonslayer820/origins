@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"question:blood",
+		"origins:climbing",
+		"question:arcane",
+		"question:runic",
+		"question:starve",
+		"question:sugar",
+		"question:sugarspeed"
+	],
+	"icon": "minecraft:enchanted_book",
+	"unchoosable": true,
+	"order": 10,
+	"impact": 2,
+	"name": "???",
+	"description": "After experimenting with ancient magic that the young child knew nothing about, it had altered her genetics. Giving them unusual abilities that will either hinder or aid them in the future. "
+}
