@@ -1,0 +1,8 @@
+{
+  "type": "origins:invulnerability",
+  "damage_condition": {
+    "type": "origins:fire"
+  },
+  "name": "Fire Immunity",
+  "description": "Being exposed to constant flames has granted you immunity to them."
+}
