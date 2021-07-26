@@ -1,0 +1,24 @@
+{
+"type": "origins:active_self",
+"entity_action": {
+  "type": "origins:and",
+  "actions": [
+    {
+      "type": "origins:execute_command",
+      "command": "tp @s ^ ^ ^5",
+      "permission_level": 4
+    },
+    {
+      "type": "origins:execute_command",
+      "command": "effect give @s minecraft:blindness 1 0 true",
+      "permission_level": 4
+    }
+  ]
+},
+"cooldown": 60,
+"hud_render": {
+    "should_render": false
+},
+"name": "Haunt",
+"description": "Shadows can blink a few meters in front of them"
+}

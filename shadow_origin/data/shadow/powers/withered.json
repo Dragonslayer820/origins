@@ -1,0 +1,8 @@
+{
+    "type": "origins:effect_immunity",
+    "effect": [
+        "minecraft:wither"
+    ],
+    "name": "Withered",
+    "description": "Your abstract form can't wither away"
+}

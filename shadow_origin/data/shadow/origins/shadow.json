@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"shadow:fade",
+		"shadow:darkness",
+		"shadow:haunt",
+		"shadow:lightweight",
+		"shadow:silence",
+		"shadow:withered"
+	],
+	"icon": "waystones:local_void",
+	"order": 12,
+	"impact": 2,
+	"name": "Shadow",
+	"description": "A being made by the voices of the damned."
+}
