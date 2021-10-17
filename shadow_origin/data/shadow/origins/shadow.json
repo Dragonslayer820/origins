@@ -7,7 +7,7 @@
 		"shadow:silence",
 		"shadow:withered"
 	],
-	"icon": "waystones:local_void",
+	"icon": "minecraft:ink_sac",
 	"order": 12,
 	"impact": 2,
 	"name": "Shadow",
