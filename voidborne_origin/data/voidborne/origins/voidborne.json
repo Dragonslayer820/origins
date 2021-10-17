@@ -9,7 +9,7 @@
 		"voidborne:stealth",
 		"voidborne:mask"
 	],
-	"icon": "waystones:pocket_wormhole",
+	"icon": "minecraft:barrier",
 	"unchoosable": true,
 	"order": 10,
 	"impact": 3,
