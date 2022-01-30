@@ -81,8 +81,8 @@
       "command": "execute as @s run function coords:save",
       "permission_level": 3
     },
-    "condition": {
-    "type": "origins:sneaking"
+	"condition": {
+      "type": "origins:sneaking"
     }
   },
   "name": "DeathProtect",
